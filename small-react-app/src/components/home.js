@@ -9,7 +9,9 @@ const Home = () => {
             <UnsignedNav />
             <div className="home-body">
                 <h1>Small React App</h1>
+                <p>This is a small training app to get the basics of React</p>
             </div>
+
 
         </div>
 
