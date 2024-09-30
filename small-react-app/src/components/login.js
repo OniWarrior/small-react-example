@@ -82,6 +82,12 @@ const Login = (props) => {
                                 <p>{errors.password}}</p>
                             </div>
 
+                            <button
+                                type='submit'
+                                className="login-submit"
+                                disabled={handleDisabled}
+                            >Login</button>
+
 
 
                         </div>
