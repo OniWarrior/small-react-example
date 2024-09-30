@@ -10,10 +10,16 @@ const UnsignedNav = () => {
         navigate('/')
     }
 
+    const goLogin = (e) => {
+        e.preventDefault()
+        navigate('/login')
+    }
+
     return (
         <div className="nav-container">
             <div className="row-nav">
                 <button className="button-home" onClick={goHome}>Home</button>
+                <button className="button-login" onClick={goLogin}>Login</button>
             </div>
         </div>
     )
