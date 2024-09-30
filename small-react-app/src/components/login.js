@@ -4,7 +4,7 @@ import '../styles/login.css'
 import { useNavigate } from "react-router";
 
 
-const Login = () => {
+const Login = (props) => {
     const navigate = useNavigate()
     //TODO add form schema
     //const[login,errors,setLogin] =useValidation(LoginFormSchema)
@@ -34,6 +34,12 @@ const Login = () => {
         }
     }
 
+    const onFormSubmit = (event) => {
+        event.preventDefault()
+        //TODO create and import api call to post login
+        //props.postLogin(navigate,login)
+
+    }
 
 
 
