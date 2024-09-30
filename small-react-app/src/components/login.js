@@ -52,6 +52,10 @@ const Login = (props) => {
                     <form className="login-form-container" onSubmit={onFormSubmit}>
                         <h2>Login</h2>
 
+                        <div className="login-input-group">
+
+                        </div>
+
                     </form>
                 </div>
             </div>
