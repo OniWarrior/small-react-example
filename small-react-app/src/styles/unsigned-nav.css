@@ -1,0 +1,11 @@
+.nav-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-items: center;
+    border-bottom: 2px solid darkblue;
+    padding-bottom: 1em;
+    
+    
+}
+
