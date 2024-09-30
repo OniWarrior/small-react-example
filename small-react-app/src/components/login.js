@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import UnsignedNav from "./unsigned-nav";
 import '../styles/login.css'
 import { useNavigate } from "react-router";
+import { postLogin } from "../state/actions/login-actions";
+import useValidation from "../hooks/useValidation";
+import { connect } from 'react-redux'
+import LoginSchema from "../form-schema/login-form-schema";
+
 
 
 const Login = (props) => {
     const navigate = useNavigate()
-    //TODO add form schema
-    //const[login,errors,setLogin] =useValidation(LoginFormSchema)
+
+    const [login, errors, setLogin] = useValidation(LoginSchema)
 
     const initialDisabled = true
     const [disabled, setDisabled] = useState(initialDisabled)
