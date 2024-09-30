@@ -10,3 +10,11 @@ const initialErrors = {
     email: '',
     password: ''
 }
+
+
+const useValidation = () => {
+
+}
+
+
+export default useValidation
