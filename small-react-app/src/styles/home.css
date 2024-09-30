@@ -3,3 +3,13 @@
     margin: auto;
     padding-top:1em;
 }
+
+.home-box{
+    border-radius: 20px;
+    border:2px solid black;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.8);
+    width:20em;
+    height:10em;
+    margin:auto;
+    padding-top:3em;
+}
