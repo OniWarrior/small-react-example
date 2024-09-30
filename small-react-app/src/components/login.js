@@ -12,6 +12,28 @@ const Login = () => {
     const initialDisabled = true
     const [disabled, setDisabled] = useState(initialDisabled)
 
+    const change = (event) => {
+        // TODO add form schema
+        // setLogin(event,LoginFormSchema)
+
+    }
+
+    const handleDisabled = (e) => {
+        e.preventDefault()
+        if (Login.email.length >= 30 && Login.password.length >= 5) {
+            setDisabled(() => ({
+                disabled: !disabled
+
+            }))
+
+        }
+        else {
+            setDisabled(() => ({
+                disabled: disabled
+            }))
+        }
+    }
+
 
 
 
