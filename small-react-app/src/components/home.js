@@ -1,5 +1,6 @@
 import React from "react";
 import UnsignedNav from "./unsigned-nav";
+import '../styles/home.css'
 
 
 const Home = () => {
