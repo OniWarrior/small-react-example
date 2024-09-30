@@ -47,6 +47,14 @@ const Login = (props) => {
     return (
         <div className="login-container">
             <UnsignedNav />
+            <div className="login-body">
+                <div className="login-box">
+                    <form className="login-form-container" onSubmit={onFormSubmit}>
+                        <h2>Login</h2>
+
+                    </form>
+                </div>
+            </div>
 
         </div>
     )
