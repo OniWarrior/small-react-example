@@ -18,8 +18,8 @@ const Login = (props) => {
     const [disabled, setDisabled] = useState(initialDisabled)
 
     const change = (event) => {
-        // TODO add form schema
-        // setLogin(event,LoginFormSchema)
+
+        setLogin(event, LoginSchema)
 
     }
 
