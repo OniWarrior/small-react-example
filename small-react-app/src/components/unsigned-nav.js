@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
+import '../styles/unsigned-nav.css'
 
 const UnsignedNav = () => {
     const navigate = useNavigate()
@@ -12,7 +13,7 @@ const UnsignedNav = () => {
     return (
         <div className="nav-container">
             <div className="row-nav">
-                <button className="button-home" onClick={goHome}></button>
+                <button className="button-home" onClick={goHome}>Home</button>
             </div>
         </div>
     )
