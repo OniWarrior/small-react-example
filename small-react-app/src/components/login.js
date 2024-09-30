@@ -70,7 +70,7 @@ const Login = (props) => {
                                 />
                             </label>
                             <div className="errors">
-                                <p></p>
+                                <p>{errors.email}</p>
                             </div>
                             <label className="label-login">
                                 Password:
@@ -84,7 +84,7 @@ const Login = (props) => {
                                 />
                             </label>
                             <div className="errors">
-                                <p></p>
+                                <p>{errors.password}</p>
                             </div>
 
                             <button
@@ -108,5 +108,18 @@ const Login = (props) => {
 
 }
 
-export default Login
+
+const mapdispatchToProps = { postLogin }
+
+const mapStateToProps = (state) => {
+    return ({
+        login: state.loginReducer.login,
+        loading: state.loginReducer.loading,
+        error: state.loginReducer.error
+    })
+}
+
+
+
+export default connect(mapStateToProps, mapdispatchToProps)(Login)
 
