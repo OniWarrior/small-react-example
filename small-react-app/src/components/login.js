@@ -53,6 +53,36 @@ const Login = (props) => {
                         <h2>Login</h2>
 
                         <div className="login-input-group">
+                            <label className="label-login">
+                                Email:
+                                <input className="email-box"
+                                    id='email'
+                                    name="email"
+                                    type="text"
+                                    placeholder="email"
+                                    required
+                                    onChange={change}
+                                />
+                            </label>
+                            <div className="errors">
+                                <p>{errors.email}}</p>
+                            </div>
+                            <label className="label-login">
+                                Password:
+                                <input className="password-box"
+                                    id='password'
+                                    name="password"
+                                    type="password"
+                                    placeholder="password"
+                                    required
+                                    onChange={change}
+                                />
+                            </label>
+                            <div className="errors">
+                                <p>{errors.password}}</p>
+                            </div>
+
+
 
                         </div>
 
