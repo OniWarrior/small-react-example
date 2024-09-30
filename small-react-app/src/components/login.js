@@ -41,8 +41,8 @@ const Login = (props) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault()
-        //TODO create and import api call to post login
-        //props.postLogin(navigate,login)
+
+        props.postLogin(navigate, login)
 
     }
 
