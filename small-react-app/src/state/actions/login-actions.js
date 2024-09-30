@@ -14,6 +14,9 @@ export const postLogin = (navigate, login) => (dispatch) => {
             localStorage.setItem('token', response.data.token)
             navigate('/user-dashboard')
         })
+        .catch(err => {
+            dispatch({ LOGIN_FAILURE, payload: err.message })
+        })
 
 
 }
