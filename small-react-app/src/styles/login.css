@@ -6,6 +6,14 @@
     height:10em;
     margin:auto;
     padding-top:3em;
-   
+    text-align: center;
+    
+}
 
+.login-box{
+    padding-top:3em;
+}
+
+.email-box{
+    margin-left:2em;
 }

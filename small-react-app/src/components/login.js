@@ -65,7 +65,7 @@ const Login = (props) => {
                                 />
                             </label>
                             <div className="errors">
-                                <p>{errors.email}}</p>
+                                <p></p>
                             </div>
                             <label className="label-login">
                                 Password:
@@ -79,7 +79,7 @@ const Login = (props) => {
                                 />
                             </label>
                             <div className="errors">
-                                <p>{errors.password}}</p>
+                                <p></p>
                             </div>
 
                             <button
