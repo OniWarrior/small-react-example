@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import '../styles/unsigned-nav.css'
+import '../styles/nav.css'
 
 const UnsignedNav = () => {
     const navigate = useNavigate()

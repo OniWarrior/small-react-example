@@ -1,6 +1,6 @@
 import * as yup from 'yup'
 
-const LoginSchema = yup.object.shape({
+const LoginSchema = yup.object().shape({
     email: yup.string()
         .trim()
         .required()

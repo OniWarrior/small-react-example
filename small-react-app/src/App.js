@@ -17,7 +17,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route element={<ProtectedRoute />} />
-          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/user-dashboard' element={<Dashboard />} />
         </Routes>
 
       </header>
