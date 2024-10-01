@@ -2,19 +2,24 @@ import React, { useState } from "react";
 import UnsignedNav from "./unsigned-nav";
 import '../styles/login.css'
 import { useNavigate } from "react-router";
+import { postLogin } from "../state/actions/login-actions";
+import useValidation from "../hooks/useValidation";
+import { connect } from 'react-redux'
+import LoginSchema from "../form-schema/login-form-schema";
+
 
 
 const Login = (props) => {
     const navigate = useNavigate()
-    //TODO add form schema
-    //const[login,errors,setLogin] =useValidation(LoginFormSchema)
+
+    const [login, errors, setLogin] = useValidation(LoginSchema)
 
     const initialDisabled = true
     const [disabled, setDisabled] = useState(initialDisabled)
 
     const change = (event) => {
-        // TODO add form schema
-        // setLogin(event,LoginFormSchema)
+
+        setLogin(event, LoginSchema)
 
     }
 
@@ -36,8 +41,8 @@ const Login = (props) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault()
-        //TODO create and import api call to post login
-        //props.postLogin(navigate,login)
+
+        props.postLogin(navigate, login)
 
     }
 
@@ -65,7 +70,7 @@ const Login = (props) => {
                                 />
                             </label>
                             <div className="errors">
-                                <p></p>
+                                <p>{errors.email}</p>
                             </div>
                             <label className="label-login">
                                 Password:
@@ -79,7 +84,7 @@ const Login = (props) => {
                                 />
                             </label>
                             <div className="errors">
-                                <p></p>
+                                <p>{errors.password}</p>
                             </div>
 
                             <button
@@ -103,5 +108,18 @@ const Login = (props) => {
 
 }
 
-export default Login
+
+const mapdispatchToProps = { postLogin }
+
+const mapStateToProps = (state) => {
+    return ({
+        login: state.loginReducer.login,
+        loading: state.loginReducer.loading,
+        error: state.loginReducer.error
+    })
+}
+
+
+
+export default connect(mapStateToProps, mapdispatchToProps)(Login)
 
