@@ -7,8 +7,8 @@ export const LOGIN_FAILURE = 'LOGIN_FAILURE'
 
 export const postLogin = (navigate, login) => (dispatch) => {
     dispatch({ LOGIN_START })
-    //TODO GET endpoint once backend complete
-    axios.post('', login)
+
+    axios.post('https://small-react-app-be-413a2d177a19.herokuapp.com/api/auth/login', login)
         .then(response => {
             dispatch({ LOGIN_SUCCESS, payload: response.data })
             localStorage.setItem('token', response.data.token)
